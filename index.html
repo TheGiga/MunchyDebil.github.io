@@ -17,53 +17,6 @@
 
 </head>
 <script src="fade.js"></script>
-
-
- <div class="header">
-
-    <div id="countdown">
-    <h3> unbanned in:</h3>
-        <div class="time-unit">
-            <span id="days">0</span> Days
-        </div>
-        <div class="time-unit">
-            <span id="hours">0</span> Hours
-        </div>
-        <div class="time-unit">
-            <span id="minutes">0</span> Minutes
-        </div>
-        <div class="time-unit">
-            <span id="seconds">0</span> Seconds
-        </div>
-    </div>
-</center>
-    <script>
-        function countdown() {
-            const targetDate = new Date('October 1, 2025 00:00:00 PDT').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days;
-            document.getElementById("hours").innerText = hours;
-            document.getElementById("minutes").innerText = minutes;
-            document.getElementById("seconds").innerText = seconds;
-
-            if (difference < 0) {
-                clearInterval(timerInterval);
-                document.getElementById("countdown").innerHTML = "Time's up!";
-            }
-        }
-
-        const timerInterval = setInterval(countdown, 1000);
-    </script>
-</div>
-
-
 <body>
 
 <br>
